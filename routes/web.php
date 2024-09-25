@@ -8,6 +8,8 @@ use App\Http\Controllers\Auth\GoogleController;
 
 use App\Http\Controllers\FBVideoDownloadController;
 
+use App\Http\Controllers\InstaVideoDownloadController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +43,6 @@ Route::get('create-videos', [VideosController::class, 'createVideos'])->name('cr
 
 Route::get('facebookuploader', [FBVideoDownloadController::class, 'index']);
 Route::post('/fetch-video', [FBVideoDownloadController::class, 'fetchVideo'])->name('fetch-video');
+
+Route::get('instagramuploader',[InstaVideoDownloadController::class,'index']);
+Route::post('/fetch-insta-video', [InstaVideoDownloadController::class, 'fetchInstaVideo'])->name('fetch.insta.video');
